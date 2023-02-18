@@ -3,7 +3,7 @@ package routers
 import (
 	"github.com/gin-gonic/gin"
 
-	"github.com/EDDYCJY/go-gin-example/routers/api/v1"
+	"github.com/AlmazDefourten/digital-helper/routers/api/v1"
 )
 
 // InitRouter initialize routing information

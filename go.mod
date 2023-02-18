@@ -1,4 +1,4 @@
-module github.com/EDDYCJY/go-gin-example
+module github.com/AlmazDefourten/digital-helper
 
 go 1.13
 

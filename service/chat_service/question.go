@@ -1,6 +1,6 @@
 package chat_service
 
-import "github.com/EDDYCJY/go-gin-example/models"
+import "github.com/AlmazDefourten/digital-helper/models"
 
 type AnswerDto struct {
 	Question string

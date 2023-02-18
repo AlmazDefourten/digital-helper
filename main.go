@@ -7,9 +7,9 @@ import (
 
 	"github.com/gin-gonic/gin"
 
-	"github.com/EDDYCJY/go-gin-example/models"
-	"github.com/EDDYCJY/go-gin-example/pkg/setting"
-	"github.com/EDDYCJY/go-gin-example/routers"
+	"github.com/AlmazDefourten/digital-helper/models"
+	"github.com/AlmazDefourten/digital-helper/pkg/setting"
+	"github.com/AlmazDefourten/digital-helper/routers"
 )
 
 func init() {

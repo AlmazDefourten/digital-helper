@@ -1,9 +1,9 @@
 package v1
 
 import (
-	"github.com/EDDYCJY/go-gin-example/pkg/app"
-	"github.com/EDDYCJY/go-gin-example/pkg/e"
-	"github.com/EDDYCJY/go-gin-example/service/chat_service"
+	"github.com/AlmazDefourten/digital-helper/pkg/app"
+	"github.com/AlmazDefourten/digital-helper/pkg/e"
+	"github.com/AlmazDefourten/digital-helper/service/chat_service"
 	"github.com/gin-gonic/gin"
 	"net/http"
 )

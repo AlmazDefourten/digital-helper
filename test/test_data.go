@@ -2,8 +2,7 @@ package test
 
 import (
 	"fmt"
-	"github.com/EDDYCJY/go-gin-example/models/intf"
-	"github.com/EDDYCJY/go-gin-example/pkg/setting"
+	"github.com/AlmazDefourten/digital-helper/pkg/setting"
 	"github.com/jinzhu/gorm"
 )
 
