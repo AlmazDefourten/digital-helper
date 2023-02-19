@@ -2,6 +2,7 @@ package models
 
 import (
 	"fmt"
+	"github.com/AlmazDefourten/digital-helper/migration"
 	"log"
 
 	"github.com/jinzhu/gorm"
@@ -34,7 +35,18 @@ func Setup() {
 		log.Fatalf("models.Setup err: %v", err)
 	}
 
-	db.AutoMigrate(&Answer{})
+	db.AutoMigrate(&Answer{}, &Grant{}, &Application{}, &Status{}, &Migration{})
+
+	var migr Migration
+	db.Where("(SELECT COUNT(*) FROM migrations) > 0").First(&migr)
+	if migr.IsMigrated == false {
+		fmt.Println(migration.MigrationText)
+		db.Exec(migration.MigrationText)
+
+	}
+
+	db.FirstOrCreate(&Migration{IsMigrated: true}, "(SELECT COUNT(*) FROM migrations) > 0")
+
 	gorm.DefaultTableNameHandler = func(db *gorm.DB, defaultTableName string) string {
 		return defaultTableName
 	}
@@ -44,11 +56,6 @@ func Setup() {
 	db.Callback().Delete().Replace("gorm:delete", deleteCallback)
 	db.DB().SetMaxIdleConns(10)
 	db.DB().SetMaxOpenConns(100)
-}
-
-// CloseDB closes database connection (unnecessary)
-func CloseDB() {
-	defer db.Close()
 }
 
 // updateTimeStampForCreateCallback will set `CreatedOn`, `ModifiedOn` when creating

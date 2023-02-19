@@ -22,3 +22,17 @@ func GetAnswer(c *gin.Context) {
 
 	appG.Response(http.StatusOK, e.SUCCESS, answer)
 }
+
+func StartChat(c *gin.Context) {
+	appG := app.Gin{C: c}
+
+	chatService := chat_service.Chat{}
+
+	answer, err := chatService.StartChat()
+	if err != nil {
+		appG.Response(http.StatusInternalServerError, e.ERROR, nil)
+		return
+	}
+
+	appG.Response(http.StatusOK, e.SUCCESS, answer)
+}
