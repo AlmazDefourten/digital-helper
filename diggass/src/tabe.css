@@ -1,0 +1,53 @@
+.Tabb{
+    display: flex;
+}
+.Tabe{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 350px;
+    margin-left: 20px;
+}
+.tab{
+    border-bottom: 1px solid black;
+    width: 200px;
+    height: 70px;
+    cursor: pointer;
+}
+.tab::after{
+    background-color: #FAA419;
+    color: white;
+}
+.tab:hover{
+    background-color: #f1d8ae;
+    color: #FAA419;
+}
+.img_tab{
+    height: 40px;
+    width: 40px;
+    position: relative;
+    top: 15px;
+    background-size: cover;
+}
+.e{
+    background-image: url(./project.png);
+}
+.z{
+    background-image: url(./application.png);
+}
+.d{
+    background-image: url(./grant.png);
+}
+.p_tab{
+    position: relative;
+    top: -30px;
+    left: 5px;
+    font-weight: bold;
+}
+.Pole{
+    width: 900px;
+    height: 600px;
+    background-color: white;
+    position: relative;
+    top: -350px;
+}

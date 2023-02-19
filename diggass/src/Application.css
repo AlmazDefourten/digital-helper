@@ -1,0 +1,51 @@
+.Appl{
+    width: 97%;
+    height: 100%;
+    overflow-y: scroll;
+    text-align: left;
+    margin-left: 25px;
+    margin-bottom: 10px;
+}
+.bord{
+    border-bottom: 1px solid black;
+}
+.p_kat{
+    font-size: 15px;
+}
+.h_kat{
+    margin-top: -13px;
+    font-size: 25px;
+}
+.form_sp{
+    width: 830px;
+    height: 50px;
+    border-radius: 5px;
+    color: red;
+}
+.color_text{
+    color: black;
+}
+.p_doc{
+    font-size: 20px;
+}
+.but_zav{
+    height: 40px;
+    width: 300px;
+    border-radius: 5px;
+    border: 1px solid #FAA419;
+    color: #FAA419;
+    background-color: white;
+    cursor: pointer;
+}
+.but_enter{
+    height: 40px;
+    width: 150px;
+    border-radius: 5px;
+    border: none;
+    background-color: #FAA419;
+    color: white;
+    position: relative;
+    left: 670px;
+    top: -25px;
+    cursor: pointer;
+}
